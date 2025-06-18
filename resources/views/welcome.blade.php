@@ -262,7 +262,7 @@
             <button class="btn-solid">SEE MY PROJECTS</button>
         </div>
         <div class="hero-img">
-            <img src="assets/images/kou.jpg" alt="Kouser Ahamed">
+            <img id="avatar" src="assets/images/kou.jpg" alt="Kouser Ahamed">
         </div>
     </section>
 

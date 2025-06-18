@@ -19,5 +19,10 @@ document.querySelectorAll(".title").forEach((abc) => {
         this.style.backgroundColor = "#000000";
         this.style.borderRadius = "10px";
         this.style.padding = "20px"
+
+        let avatar = document.getElementById("avatar");
+avatar.src = "https://www.shutterstock.com/image-vector/cheerful-funny-cartoon-childrens-robot-600nw-2407552137.jpg";
+avatar.classList.add("card");
+
     };
 });
