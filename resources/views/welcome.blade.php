@@ -2,297 +2,324 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kouser - Visual Designer</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kouser - Visual Designer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-        body {
-            background-color: #fff;
-            color: #333;
-        }
+    body {
+      background-color: #fff;
+      color: #333;
+    }
 
-        /* Header/Nav */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 25px 60px;
-            border-bottom: 1px solid #eee;
-        }
+    /* Header/Nav */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 60px;
+      border-bottom: 1px solid #eee;
+    }
 
-        .logo {
-            font-size: 28px;
-            font-weight: 600;
-            color: #000;
-        }
+    .logo {
+      font-size: 28px;
+      font-weight: 600;
+      color: #000;
+    }
 
-        nav {
-            display: flex;
-            gap: 30px;
-        }
+    nav {
+      display: flex;
+      gap: 30px;
+    }
 
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-size: 15px;
-            font-weight: 500;
-            position: relative;
-            padding-bottom: 5px;
-            transition: color 0.2s ease;
-        }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-size: 15px;
+      font-weight: 500;
+      position: relative;
+      padding-bottom: 5px;
+      transition: color 0.2s ease;
+    }
 
-        nav a:hover {
-            color: #f36a3e;
-        }
+    nav a:hover {
+      color: #f36a3e;
+    }
 
-        nav a.active {
-            color: #f36a3e;
-        }
+    nav a.active {
+      color: #f36a3e;
+    }
 
-        nav a.active::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: #f36a3e;
-        }
+    nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #f36a3e;
+    }
 
-        /* Hero Section */
-        .hero {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 80px 60px;
-            flex-wrap: wrap;
-        }
+    /* Hero Section */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 80px 60px;
+      flex-wrap: wrap;
+    }
 
-        .hero-text {
-            max-width: 50%;
-        }
+    .hero-text {
+      max-width: 50%;
+    }
 
-        .hero-text h1 {
-            font-size: 38px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
+    .hero-text h1 {
+      font-size: 38px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
 
-        .hero-text h1 span {
-            color: #f36a3e;
-        }
+    .hero-text h1 span {
+      color: #f36a3e;
+    }
 
-        .hero-text p {
-            color: #777;
-            line-height: 1.6;
-            margin-bottom: 25px;
-        }
+    .hero-text p {
+      color: #777;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
 
-        .hero-text button {
-            padding: 12px 20px;
-            font-weight: bold;
-            border-radius: 6px;
-            margin-right: 15px;
-            cursor: pointer;
-        }
+    .hero-text button {
+      padding: 12px 20px;
+      font-weight: bold;
+      border-radius: 6px;
+      margin-right: 15px;
+      cursor: pointer;
+    }
 
-        .btn-outline {
-            background-color: white;
-            border: 2px solid #f36a3e;
-            color: #f36a3e;
-        }
+    .btn-outline {
+      background-color: white;
+      border: 2px solid #f36a3e;
+      color: #f36a3e;
+      transition: all 0.3s ease;
+    }
 
-        .btn-solid {
-            background-color: #275d52;
-            color: white;
-            border: none;
-        }
+    .btn-outline:hover {
+      background-color: #f36a3e;
+      color: white;
+    }
 
-        .hero-img img {
-            max-width: 320px;
-            border-radius: 10px;
-        }
+    .btn-solid {
+      background-color: #275d52;
+      color: white;
+      border: none;
+      transition: all 0.3s ease;
+    }
 
-        /* Social Links */
-        .socials {
-            position: absolute;
-            right: 30px;
-            top: 200px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
+    .btn-solid:hover {
+      background-color: #1c4a40;
+    }
 
-        .socials a {
-            writing-mode: vertical-rl;
-            transform: rotate(180deg);
-            background-color: #2b665c;
-            color: white;
-            padding: 10px 8px;
-            border-radius: 8px;
-            font-weight: bold;
-            text-decoration: none;
-            text-align: center;
-            font-size: 14px;
-        }
+    .hero-img img {
+      max-width: 320px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
 
-        /* Services Section */
-        .services {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            padding: 60px 20px;
-            background-color: #fafafa;
-            flex-wrap: wrap;
-        }
+    .hero-img img:hover {
+      transform: scale(1.05);
+    }
 
-        .service-card {
-            background-color: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            width: 250px;
-        }
+    /* Social Links */
+    .socials {
+      position: absolute;
+      right: 30px;
+      top: 200px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
 
-        .service-card h3 {
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
+    .socials a {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      background-color: #2b665c;
+      color: white;
+      padding: 10px 8px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      text-align: center;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
 
-        .service-card p {
-            color: #888;
-            font-size: 14px;
-        }
+    .socials a:hover {
+      background-color: #f36a3e;
+    }
 
-        .icon-circle {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            color: white;
-        }
+    /* Services Section */
+    .services {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 60px 20px;
+      background-color: #fafafa;
+      flex-wrap: wrap;
+    }
 
-        .web {
-            background-color: #2ec18f;
-        }
+    .service-card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      width: 250px;
+      transition: all 0.3s ease;
+    }
 
-        .dash {
-            background-color: #f36a3e;
-        }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.08);
+    }
 
-        .app {
-            background-color: #2196f3;
-        }
+    .service-card h3 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                gap: 15px;
-                padding: 20px;
-            }
+    .service-card p {
+      color: #888;
+      font-size: 14px;
+    }
 
-            nav {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 20px;
-            }
+    .icon-circle {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: white;
+    }
 
-            .hero {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                padding: 40px 20px;
-            }
+    .web {
+      background-color: #2ec18f;
+    }
 
-            .hero-text,
-            .hero-img {
-                max-width: 100%;
-            }
+    .dash {
+      background-color: #f36a3e;
+    }
 
-            .socials {
-                position: static;
-                flex-direction: row;
-                justify-content: center;
-                margin-top: 20px;
-            }
+    .app {
+      background-color: #2196f3;
+    }
 
-            .services {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      .hero-text,
+      .hero-img {
+        max-width: 100%;
+      }
+
+      .socials {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .services {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="logo">Kouser</div>
-        <nav class="navbar">
-            <a href="#" class="active">About Me</a>
-            <a href="#">Works</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Services</a>
-            <a href="#">Pricing</a>
-            <a href="#">Contact Me</a>
-        </nav>
-    </header>
+  <!-- Header -->
+  <header>
+    <div class="logo">Kouser</div>
+    <nav class="navbar">
+      <a href="#" class="active">About Me</a>
+      <a href="#">Works</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Services</a>
+      <a href="#">Pricing</a>
+      <a href="#">Contact Me</a>
+    </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-text">
-            <h1 class="title">Hi, I Am Kouser Ahamed,<br><span>Expert Visual Designer.</span></h1>
-            <p id="test">Amit minim mullet non doforent alamo est sit aliquant dolor the non alamo denim sent. Veldt official
-                consequent there denim alamos mullet denim exercitation venulose consequent shunts.</p>
-            <button class="btn-outline">KNOW MORE</button>
-            <button class="btn-solid">SEE MY PROJECTS</button>
-        </div>
-        <div class="hero-img">
-            <img id="avatar" src="assets/images/kou.jpg" alt="Kouser Ahamed">
-        </div>
-    </section>
-
-    <!-- Social Buttons -->
-    <div class="socials">
-        <a href="#">LINKEDIN</a>
-        <a href="#">DRIBBLE</a>
-        <a href="#">BEHANCE</a>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1 class="title">Hi, I Am Kouser Ahamed,<br><span>Expert Visual Designer.</span></h1>
+      <p id="test">Amit minim mullet non doforent alamo est sit aliquant dolor the non alamo denim sent. Veldt official
+        consequent there denim alamos mullet denim exercitation venulose consequent shunts.</p>
+      <button class="btn-outline">KNOW MORE</button>
+      <button class="btn-solid">SEE MY PROJECTS</button>
     </div>
+    <div class="hero-img">
+      <img id="avatar" src="assets/images/kou.jpg" alt="Kouser Ahamed">
+    </div>
+  </section>
 
-    <!-- Services Section -->
-    <section class="services">
-        <div class="service-card">
-            <div class="icon-circle web">🖥</div>
-            <h3>Website Design</h3>
-            <p>Denim veldt mullet exercitation alamo consomes consequent alum nostrum.</p>
-        </div>
-        <div class="service-card">
-            <div class="icon-circle dash">📊</div>
-            <h3>Dashboard Design</h3>
-            <p>Denim veldt mullet exercitation alamo consomes consequent alum nostrum.</p>
-        </div>
-        <div class="service-card">
-            <div class="icon-circle app">📱</div>
-            <h3>Mobile App Design</h3>
-            <p>Denim veldt mullet exercitation alamo consomes consequent alum nostrum.</p>
-        </div>
-    </section>
-    <script src="{{ asset('assets/js/script.js') }}"></script>
+  <!-- Social Buttons -->
+  <div class="socials">
+    <a href="#">LINKEDIN</a>
+    <a href="#">DRIBBLE</a>
+    <a href="#">BEHANCE</a>
+  </div>
 
+  <!-- Services Section -->
+  <section class="services">
+    <div class="service-card">
+      <div class="icon-circle web">🖥</div>
+      <h3>Website Design</h3>
+      <p>Denim veldt mullet exercitation alamo consomes consequent alum nostrum.</p>
+    </div>
+    <div class="service-card">
+      <div class="icon-circle dash">📊</div>
+      <h3>Dashboard Design</h3>
+      <p>Denim veldt mullet exercitation alamo consomes consequent alum nostrum.</p>
+    </div>
+    <div class="service-card">
+      <div class="icon-circle app">📱</div>
+      <h3>Mobile App Design</h3>
+      <p>Denim veldt mullet exercitation alamo consomes consequent alum nostrum.</p>
+    </div>
+  </section>
+
+  <script src="{{ asset('assets/js/script.js') }}"></script>
 
 </body>
 
