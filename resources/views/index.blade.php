@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @stack('style')
 
-     <style>
+ <style>Add commentMore actions
     * {
   margin: 0;
   padding: 0;
@@ -32,6 +32,8 @@ header {
   font-size: 28px;
   font-weight: 600;
   color: #000;
+  position: sticky;
+  z-index: 100;
 }
 
 nav {
@@ -462,7 +464,7 @@ nav a.active::after {
 }
 
 .highlight-card.active {
-  background: #fff;
+  
   color: #333;
   transform: scale(1.05);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
