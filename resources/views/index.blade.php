@@ -26,14 +26,18 @@ header {
   align-items: center;
   padding: 25px 60px;
   border-bottom: 1px solid #eee;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  z-index: 1000;
 }
 
 .logo {
-  font-size: 28px;
+  font-size: 20px; /* reduced from 28px */
   font-weight: 600;
   color: #000;
-  position: sticky;
-  z-index: 100;
 }
 
 nav {
@@ -71,7 +75,7 @@ nav a.active::after {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 80px 60px;
+  padding: 140px 60px 80px; /* increased top padding to offset fixed header */
 }
 
 .hero-text {
@@ -330,61 +334,6 @@ nav a.active::after {
   color: #777;
 }
 
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-  }
-
-  nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .hero {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 40px 20px;
-  }
-
-  .hero-text,
-  .hero-img {
-    max-width: 100%;
-  }
-
-  .socials {
-    position: static;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 20px;
-  }
-
-  .services {
-    flex-direction: column;
-    gap: 30px;
-    padding: 40px 20px;
-  }
-
-  .service-card {
-    border: none;
-    border-bottom: 1px solid #f1f1f1;
-  }
-
-  .service-card:last-child {
-    border-bottom: none;
-  }
-
-  .hire-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hire-card.full-img {
-    display: none;
-  }
-}
 .service-highlight {
   background: #111;
   padding: 80px 20px;
@@ -425,7 +374,6 @@ nav a.active::after {
   box-shadow: 0 0 0 transparent;
 }
 
-/* Hover Effect */
 .highlight-card:hover {
   background: #2a2a2a;
   transform: scale(1.03);
@@ -464,7 +412,6 @@ nav a.active::after {
 }
 
 .highlight-card.active {
-  
   color: #333;
   transform: scale(1.05);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
@@ -486,8 +433,6 @@ nav a.active::after {
   background: #f36a3e;
   color: white;
 }
-
-
 
 .contact-section {
   background: #20232a;
@@ -566,30 +511,85 @@ textarea {
   background: #d35429;
 }
 
+.footer {
+  background-color: #111;
+  padding: 30px 20px;
+  color: #aaa;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-content span {
+  color: #f36a3e;
+  font-weight: 600;
+}
+
+.footer-content span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px 40px;
+  }
+
+  .hero-text,
+  .hero-img {
+    max-width: 100%;
+  }
+
+  .socials {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .services {
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 20px;
+  }
+
+  .service-card {
+    border: none;
+    border-bottom: 1px solid #f1f1f1;
+  }
+
+  .service-card:last-child {
+    border-bottom: none;
+  }
+
+  .hire-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hire-card.full-img {
+    display: none;
+  }
+
   .form-grid {
     flex-direction: column;
   }
 }
 
-
-  .footer {
-    background-color: #111;
-    padding: 30px 20px;
-    color: #aaa;
-    text-align: center;
-    font-size: 14px;
-  }
-
-  .footer-content span {
-    color: #f36a3e;
-    font-weight: 600;
-  }
-
-  .footer-content span:hover {
-    text-decoration: underline;
-    cursor: pointer;
-  }
 
   </style>
 </head>
