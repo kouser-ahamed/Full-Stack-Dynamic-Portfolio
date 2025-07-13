@@ -7,7 +7,7 @@
     @stack('style')
 
  <style>Add commentMore actions
-    /* General Reset */
+ /* Base Reset */
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +19,11 @@ body {
   background: #fff;
   color: #333;
   line-height: 1.5;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
 }
 
 /* Header */
@@ -168,27 +173,25 @@ nav a.active::after {
   background: #f36a3e;
 }
 
-/* Services Section */
+/* Services */
 .services {
   display: flex;
   justify-content: center;
-  gap: 0;
-  padding: 0;
-  background: #fff;
-  border: 1px solid #ededed;
-  border-radius: 12px;
+  flex-wrap: wrap;
   max-width: 1120px;
   margin: 60px auto;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #ededed;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
-  flex-wrap: wrap;
 }
 
 .service-card {
   flex: 1 1 250px;
   text-align: center;
   padding: 30px;
-  transition: 0.3s;
   border-left: 1px solid #f1f1f1;
+  transition: 0.3s;
 }
 
 .service-card:first-child {
@@ -215,16 +218,7 @@ nav a.active::after {
 .dash { background: #f36a3e; }
 .app { background: #2196f3; }
 
-.service-card h3 {
-  margin: 20px 0 10px;
-}
-
-.service-card p {
-  color: #888;
-  font-size: 14px;
-}
-
-/* Hire Me Section */
+/* Resume Section (Hire Me) */
 .hire-me {
   background: #fff;
   padding: 60px 20px;
@@ -255,7 +249,6 @@ nav a.active::after {
 @media (min-width: 992px) {
   .hire-grid {
     grid-template-columns: repeat(3, 1fr);
-    align-items: stretch;
   }
 
   .hire-card.full-img {
@@ -296,9 +289,8 @@ nav a.active::after {
   font-size: 32px;
   font-weight: 700;
   color: #2ec18f;
-  margin: 0 0 18px;
+  margin-bottom: 18px;
 }
-
 .hire-card.orange h4 { color: #f36a3e; }
 .hire-card.blue h4 { color: #2196f3; }
 .hire-card.purple h4 { color: #7c5af9; }
@@ -313,7 +305,7 @@ nav a.active::after {
   color: #777;
 }
 
-/* Highlight Services */
+/* Highlighted Services */
 .service-highlight {
   background: #111;
   padding: 80px 20px;
@@ -351,13 +343,11 @@ nav a.active::after {
   padding: 25px;
   text-align: left;
   transition: 0.3s ease;
-  box-shadow: 0 0 0 transparent;
 }
 
 .highlight-card:hover {
   background: #2a2a2a;
   transform: scale(1.03);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .highlight-card h3 {
@@ -394,27 +384,23 @@ nav a.active::after {
 .highlight-card.active {
   color: #333;
   transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
 .highlight-card.active h3 {
   color: #f36a3e;
 }
-
 .highlight-card.active p {
   color: #444;
 }
-
 .highlight-card.active .read-btn {
   color: #333;
 }
-
 .highlight-card.active .read-btn span {
   background: #f36a3e;
   color: white;
 }
 
-/* Contact Section */
+/* Contact */
 .contact-section {
   background: #20232a;
   padding: 80px 20px;
