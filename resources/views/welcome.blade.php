@@ -43,7 +43,8 @@
                 <a href="https://github.com/kouser-ahamed" target="_blank">
                     <img src="{{ asset('assets/images/github.svg') }}" alt="Github" width="50px" />
                 </a>
-                <a href="#">BEHANCE</a>
+                <a href="https://www.facebook.com/kouserahamed420" target="_blank">
+                <img src="{{ asset('assets/images/facebookk.svg') }}" alt="Facebook" width="50px" /></a>
             </div>
         </div>
     </section>
