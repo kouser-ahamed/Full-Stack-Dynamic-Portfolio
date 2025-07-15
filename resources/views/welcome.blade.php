@@ -8,11 +8,14 @@
 @section('main-content')
     <header>
         <div class="logo">Kouser Ahamed</div>
-        <nav class="navbar">
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav>
             <a href="#aboutme" class="active">About Me</a>
             <a href="#work">Works</a>
             <a href="#service">Services</a>
-            <a href="">Resume</a>
+            <a href="#resume">Resume</a>
             <a href="#contact">Contact Me</a>
         </nav>
     </header>
@@ -114,7 +117,7 @@
                     <p>Denim veldt mullet exercitation alamo consomes consequent alum nostrums.</p>
                     <button class="read-btn">READ MORE <span>➤</span></button>
                 </div>
-                <div class="highlight-card active">
+                <div class="highlight-card">
                     <h3>Website Design</h3>
                     <p>Denim veldt mullet exercitation alamo consomes consequent alum nostrums.</p>
                     <button class="read-btn">READ MORE <span>➤</span></button>
