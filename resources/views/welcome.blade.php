@@ -15,7 +15,7 @@
             <a href="#aboutme" class="active">About Me</a>
             <a href="#work">Works</a>
             <a href="#service">Services</a>
-            <a href="#resume">Resume</a>
+            <a href="https://drive.google.com/file/d/10w5h1LothiENdk4MlUAiPlv8z9lXGeqj/view?usp=sharing" target="_blank">Resume</a>
             <a href="#contact">Contact Me</a>
         </nav>
     </header>
@@ -37,32 +37,36 @@
         <div class="hero-img">
             <img src="{{ asset('assets/images/kou.jpg') }}" alt="Kouser Ahamed" />
             <div class="socials">
-                <a href="https://linked">
+                <a href="https://www.linkedin.com/in/kouser-ahamed/" target="_blank">
                     <img src="{{ asset('assets/images/linked.png') }}" alt="LinkedIn" width="50px" />
                 </a>
-                <a href="#">DRIBBLE</a>
+                <a href="https://github.com/kouser-ahamed" target="_blank">
+                    <img src="{{ asset('assets/images/github.svg') }}" alt="Github" width="50px" />
+                </a>
                 <a href="#">BEHANCE</a>
             </div>
         </div>
     </section>
 
-    <section id="about" class="services">
-        <div class="service-card">
-            <div class="icon-circle web">🖥</div>
-            <h3>Website Design</h3>
-            <p>Denim veldt mullet exercitation alamo consomes consequent alum nostrum.</p>
-        </div>
-        <div class="service-card">
-            <div class="icon-circle dash">📊</div>
-            <h3>Dashboard Design</h3>
-            <p>Denim veldt mullet exercitation alamo consomes consequent alum nostrum.</p>
-        </div>
-        <div class="service-card">
-            <div class="icon-circle app">📱</div>
-            <h3>Mobile App Design</h3>
-            <p>Denim veldt mullet exercitation alamo consomes consequent alum nostrum.</p>
-        </div>
-    </section>
+    <div style="position: relative;">
+        <section id="about" class="services">
+            <div class="service-card">
+                <div class="icon-circle web">🖥</div>
+                <h3>Website Design</h3>
+                <p>Denim veldt mullet exercitation alamo consomes consequent alum nostrum.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon-circle dash">📊</div>
+                <h3>Dashboard Design</h3>
+                <p>Denim veldt mullet exercitation alamo consomes consequent alum nostrum.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon-circle app">📱</div>
+                <h3>Mobile App Design</h3>
+                <p>Denim veldt mullet exercitation alamo consomes consequent alum nostrum.</p>
+            </div>
+        </section>
+    </div>
 
     <section id="work" class="hire-me">
         <div class="hire-container">
@@ -115,32 +119,34 @@
                 <div class="highlight-card">
                     <h3>Mobile App Design</h3>
                     <p>Denim veldt mullet exercitation alamo consomes consequent alum nostrums.</p>
-                    <button class="read-btn">READ MORE <span>➤</span></button>
+                    <a href="{{ route('service.detail', 'mobile-app-design') }}" class="read-btn">READ MORE
+                        <span>➤</span></a>
                 </div>
                 <div class="highlight-card">
                     <h3>Website Design</h3>
                     <p>Denim veldt mullet exercitation alamo consomes consequent alum nostrums.</p>
-                    <button class="read-btn">READ MORE <span>➤</span></button>
+                    <a href="{{ route('service.detail', 'website-design') }}" class="read-btn">READ MORE <span>➤</span></a>
                 </div>
                 <div class="highlight-card">
                     <h3>Dashboard Design</h3>
                     <p>Denim veldt mullet exercitation alamo consomes consequent alum nostrums.</p>
-                    <button class="read-btn">READ MORE <span>➤</span></button>
+                    <a href="{{ route('service.detail', 'dashboard-design') }}" class="read-btn">READ MORE
+                        <span>➤</span></a>
                 </div>
                 <div class="highlight-card">
                     <h3>Product Design</h3>
                     <p>Denim veldt mullet exercitation alamo consomes consequent alum nostrums.</p>
-                    <button class="read-btn">READ MORE <span>➤</span></button>
+                    <a href="{{ route('service.detail', 'product-design') }}" class="read-btn">READ MORE <span>➤</span></a>
                 </div>
                 <div class="highlight-card">
                     <h3>Branding Design</h3>
                     <p>Denim veldt mullet exercitation alamo consomes consequent alum nostrums.</p>
-                    <button class="read-btn">READ MORE <span>➤</span></button>
+                    <a href="{{ route('service.detail', 'branding-design') }}" class="read-btn">READ MORE <span>➤</span></a>
                 </div>
                 <div class="highlight-card">
                     <h3>Graphics Design</h3>
                     <p>Denim veldt mullet exercitation alamo consomes consequent alum nostrums.</p>
-                    <button class="read-btn">READ MORE <span>➤</span></button>
+                    <a href="{{ route('service.detail', 'graphics-design') }}" class="read-btn">READ MORE <span>➤</span></a>
                 </div>
             </div>
         </div>
