@@ -15,11 +15,12 @@ class AuthenticationController extends Controller
             'password' => 'required',
         ]);
 
-        if (Auth::attempt($credentials)) {
-            return "Login Successful";
-        } else {
-            return "Login Failed";
+        if(Auth::attempt($credentials)){
+             return redirect("admin/dashboard");
+        }else{
+           return redirect("/login");
         }
+        
     }
 
     public function register(Request $request)

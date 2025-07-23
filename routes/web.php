@@ -2,6 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthenticationController;
+use App\Http\Controllers\DashboardController;
+
+// Admin Routes
+Route::middleware(['auth', ])->group(function () {
+    Route::Get('/admin/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+});
+
 
 Route::get('/register', function () {
     return view('auth.register');
