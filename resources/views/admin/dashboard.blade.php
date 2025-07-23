@@ -1,12 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Dashboard - Portfolio Admin</title>
-</head>
-<body>
+{{-- @extends('admin.layout')
 
-    <h1>Welcome to Your Dashboard</h1>
+@push('style')
+    <title>Admin - Dashboard</title>
+@endpush
 
-</body>
-</html>
+@section('main-content')
+    <div class="overview">
+        
+    </div>
+@endsection --}}
+
+
+@extends('admin.layout')
+@push('style')
+    <title>Admin - Dashboard</title>
+@endpush
+
+@section('main-content')
+    <div>
+
+    </div>
+@endsection
