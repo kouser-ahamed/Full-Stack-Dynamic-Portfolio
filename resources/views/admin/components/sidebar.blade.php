@@ -4,7 +4,12 @@
 		<h2 style="font-size: 1.5rem; font-weight: bold; letter-spacing: 1px;">Admin Panel</h2>
 	</div>
 	<ul style="list-style: none; padding: 0; margin: 0;">
-	<!-- Dashboard link removed as per requirements -->
+		<!-- Dashboard link removed as per requirements -->
+		<li style="margin-bottom: 18px;">
+			<a href="{{ route('admin.personal.index') }}" style="color: #fff; text-decoration: none; display: block; padding: 10px 30px; border-radius: 4px; transition: background 0.2s;">
+				<i class="fas fa-id-card"></i> Personal Info
+			</a>
+		</li>
 		<li style="margin-bottom: 18px;">
 			<a href="{{ route('admin.users.index') }}" style="color: #fff; text-decoration: none; display: block; padding: 10px 30px; border-radius: 4px; transition: background 0.2s;">
 				<i class="fas fa-users"></i> Users

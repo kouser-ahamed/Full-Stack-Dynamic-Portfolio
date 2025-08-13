@@ -1,4 +1,6 @@
+
 <?php
+use App\Http\Controllers\PersonalDetailController;
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthenticationController;
@@ -13,6 +15,7 @@ use App\Http\Controllers\ExperienceController;
 // Admin Routes
 Route::middleware(['auth', ])->group(function () {
     Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+    Route::resource('/admin/personal', PersonalDetailController::class, ['as' => 'admin']);
     Route::resource('/admin/users', UserController::class, ['as' => 'admin']);
     Route::resource('/admin/projects', ProjectController::class, ['as' => 'admin']);
     Route::resource('/admin/skills', SkillController::class, ['as' => 'admin']);
