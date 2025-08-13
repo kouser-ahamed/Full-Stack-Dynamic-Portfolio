@@ -3,10 +3,26 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\SkillController;
+use App\Http\Controllers\EducationController;
+use App\Http\Controllers\AchievementController;
+use App\Http\Controllers\ExperienceController;
 
 // Admin Routes
 Route::middleware(['auth', ])->group(function () {
-    Route::Get('/admin/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+    Route::resource('/admin/users', UserController::class, ['as' => 'admin']);
+    Route::resource('/admin/projects', ProjectController::class, ['as' => 'admin']);
+    Route::resource('/admin/skills', SkillController::class, ['as' => 'admin']);
+    Route::resource('/admin/education', EducationController::class, ['as' => 'admin']);
+    Route::resource('/admin/achievements', AchievementController::class, ['as' => 'admin']);
+    Route::resource('/admin/experiences', ExperienceController::class, ['as' => 'admin']);
+    Route::post('/admin/logout', function () {
+        Auth::logout();
+        return redirect('/login');
+    })->name('admin.logout');
 });
 
 
