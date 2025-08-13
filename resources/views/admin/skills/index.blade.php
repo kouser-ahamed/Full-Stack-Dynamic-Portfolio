@@ -63,9 +63,25 @@
         <form action="{{ route('admin.skills.store') }}" method="POST" id="skillsForm">
             @csrf
             <div id="skillsFields">
-                <div class="skill-form-group">
-                    <label>Skill Name</label>
-                    <input type="text" name="name[]" required>
+                <div class="skill-form-group-set">
+                    <div class="skill-form-group">
+                        <label>Skill Name</label>
+                        <input type="text" name="name[]" required>
+                    </div>
+                    <div class="skill-form-group">
+                        <label>Skill Level</label>
+                        <select name="level[]" required>
+                            <option value="">Select Level</option>
+                            <option value="Beginner">Beginner</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Advanced">Advanced</option>
+                            <option value="Expert">Expert</option>
+                        </select>
+                    </div>
+                    <div class="skill-form-group">
+                        <label>Description</label>
+                        <input type="text" name="description[]">
+                    </div>
                 </div>
             </div>
             <button type="button" class="skill-form-btn" style="background:#007bff;margin-bottom:18px;" onclick="addSkillField()">+ Add More</button>
@@ -75,13 +91,29 @@
     <script>
         function addSkillField() {
             const fields = document.getElementById('skillsFields');
-            const group = document.createElement('div');
-            group.className = 'skill-form-group';
-            group.innerHTML = `
-                <label>Skill Name</label>
-                <input type="text" name="name[]" required>
+            const set = document.createElement('div');
+            set.className = 'skill-form-group-set';
+            set.innerHTML = `
+                <div class=\"skill-form-group\">
+                    <label>Skill Name</label>
+                    <input type=\"text\" name=\"name[]\" required>
+                </div>
+                <div class=\"skill-form-group\">
+                    <label>Skill Level</label>
+                    <select name=\"level[]\" required>
+                        <option value=\"\">Select Level</option>
+                        <option value=\"Beginner\">Beginner</option>
+                        <option value=\"Intermediate\">Intermediate</option>
+                        <option value=\"Advanced\">Advanced</option>
+                        <option value=\"Expert\">Expert</option>
+                    </select>
+                </div>
+                <div class=\"skill-form-group\">
+                    <label>Description</label>
+                    <input type=\"text\" name=\"description[]\">
+                </div>
             `;
-            fields.appendChild(group);
+            fields.appendChild(set);
         }
     </script>
 @endsection
