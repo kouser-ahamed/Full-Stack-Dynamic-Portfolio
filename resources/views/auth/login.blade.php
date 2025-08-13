@@ -7,15 +7,20 @@
     <style>
         html, body {
             height: 100%;
+            margin: 0;
+            padding: 0;
         }
         body {
             min-height: 100dvh;
             height: 100dvh;
             background: linear-gradient(135deg, #007bff 0%, #6a82fb 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .auth-outer {
+            min-height: 100dvh;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'Segoe UI', Arial, sans-serif;
         }
         .auth-container {
             background: rgba(255,255,255,0.98);
@@ -24,9 +29,19 @@
             padding: 56px 36px 36px 36px;
             width: 100%;
             max-width: 410px;
+            min-width: 300px;
             text-align: center;
             position: relative;
             animation: fadeIn 0.7s cubic-bezier(.4,0,.2,1);
+            margin: 24px;
+        }
+        @media (max-width: 480px) {
+            .auth-container {
+                padding: 32px 10px 24px 10px;
+                min-width: unset;
+                max-width: 98vw;
+            }
+        }
         }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(40px); }
@@ -97,8 +112,9 @@
         }
     </style>
 </head>
-<body>
-    <div class="auth-container">
+    <body>
+    <div class="auth-outer">
+        <div class="auth-container">
         <div class="icon">
             <svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="20" fill="#e3eaff"/><path d="M20 21.5c2.485 0 4.5-2.015 4.5-4.5s-2.015-4.5-4.5-4.5-4.5 2.015-4.5 4.5 2.015 4.5 4.5 4.5Zm0 2c-3.038 0-9 1.522-9 4.5V31h18v-3c0-2.978-5.962-4.5-9-4.5Z" fill="#007bff"/></svg>
         </div>
@@ -117,6 +133,7 @@
             <button type="submit">Login</button>
         </form>
         <a class="link" href="{{ route('register') }}">Don't have an account? Register</a>
+        </div>
     </div>
 </body>
 </html>
